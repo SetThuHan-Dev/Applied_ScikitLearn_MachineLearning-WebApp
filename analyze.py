@@ -65,28 +65,19 @@ if select == 'Home':
 	if choose == ('sqft_above'):
 		sns.regplot(x = "sqft_above", y = "price", data = data)
 		fig, ax = plt.subplots()
-		ax.scatter(x = "sqft_above", y = "price", data = data)
-		st.pyplot(fig)
+		st.pyplot()
 	elif choose == ('sqft_basement'):
 		sns.regplot(x = "sqft_basement", y = "price", data = data)
-		fig, ax = plt.subplots()
-		ax.scatter(x = "sqft_basement", y = "price", data = data)
-		st.pyplot(fig)
+		st.pyplot()
 	elif choose == ('waterfront'):
 		sns.regplot(x = "waterfront", y = "price", data = data)
-		fig, ax = plt.subplots()
-		ax.scatter(x = "waterfront", y = "price", data = data)
-		st.pyplot(fig)
+		st.pyplot()
 	elif choose == ('grade'):
 		sns.regplot(x = "grade", y = "price", data = data)
-		fig, ax = plt.subplots()
-		ax.scatter(x = "grade", y = "price", data = data)
-		st.pyplot(fig)
+		st.pyplot()
 	elif choose == ('floors'):
 		sns.regplot(x = "floors", y = "price", data = data)
-		fig, ax = plt.subplots()
-		ax.scatter(x = "floors", y = "price", data = data)
-		st.pyplot(fig)
+		st.pyplot()
 
 	image = Image.open('data.jpeg')
 	st.image(image, caption='Coded with Python ', use_column_width=True)
