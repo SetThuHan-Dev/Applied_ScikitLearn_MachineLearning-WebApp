@@ -11,6 +11,7 @@ from sklearn import metrics
 from sklearn.metrics import f1_score
 from sklearn.metrics import accuracy_score
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 file_name= 'kc_house_data_NaN.csv'
 Date_Time = 'date'
