@@ -5,3 +5,4 @@ numpy
 seaborn
 pillow
 sklearn
+scikit-learn
