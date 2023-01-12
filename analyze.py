@@ -48,7 +48,6 @@ def load_data(nrows):
 data = load_data(100000)
 data_frame = data
 
-
 st.sidebar.header('User parameters')
 select = st.sidebar.selectbox("Choose Machine Learning Algorithm", ['Home','Linear Regression', 'KNeighborsClassifier'])
 y = data_frame[('price')]
@@ -65,19 +64,29 @@ if select == 'Home':
 	choose = st.selectbox('Choose one whether a feature is negatively or positively correlated with price.', [ 'Features','sqft_above', 'sqft_basement', 'waterfront', 'grade', 'floors'])
 	if choose == ('sqft_above'):
 		sns.regplot(x = "sqft_above", y = "price", data = data)
-		st.pyplot()
+		fig, ax = plt.subplots()
+		ax.scatter(x = "sqft_above", y = "price", data = data)
+		st.pyplot(fig)
 	elif choose == ('sqft_basement'):
 		sns.regplot(x = "sqft_basement", y = "price", data = data)
-		st.pyplot()
+		fig, ax = plt.subplots()
+		ax.scatter(x = "sqft_basement", y = "price", data = data)
+		st.pyplot(fig)
 	elif choose == ('waterfront'):
 		sns.regplot(x = "waterfront", y = "price", data = data)
-		st.pyplot()
+		fig, ax = plt.subplots()
+		ax.scatter(x = "waterfront", y = "price", data = data)
+		st.pyplot(fig)
 	elif choose == ('grade'):
 		sns.regplot(x = "grade", y = "price", data = data)
-		st.pyplot()
+		fig, ax = plt.subplots()
+		ax.scatter(x = "grade", y = "price", data = data)
+		st.pyplot(fig)
 	elif choose == ('floors'):
 		sns.regplot(x = "floors", y = "price", data = data)
-		st.pyplot()
+		fig, ax = plt.subplots()
+		ax.scatter(x = "floors", y = "price", data = data)
+		st.pyplot(fig)
 
 	image = Image.open('data.jpeg')
 	st.image(image, caption='Coded with Python ', use_column_width=True)
