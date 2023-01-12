@@ -1,2 +1,2 @@
 # MachineLearning-WebApp
-Applied Linear Regression and KNN
+Applied scikit-learn: Linear Regression and KNN
